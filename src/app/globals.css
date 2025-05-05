@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background: #fff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'Marcellus';
+  src: url('/font/Marcellus/Marcellus-Regular.ttf') format('truetype');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@font-face {
+  font-family: 'PlayfairDisplayBold';
+  src: url('/font/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+}
+
+.font-Marcellus{
+  font-family: 'Marcellus';
+}
+
+.font-PlayfairDisplayBold{
+  font-family: 'PlayfairDisplayBold';
+}
+
+.nav-items::before {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-1000 border-t-2 border-b-2 border-red-700;
+  transform: scaleY(2);
+  z-index: 1;
+}
+
+.nav-items:hover::before {
+  opacity: 1;
+  transform: scaleY(1.2);
+}
+
+.nav-items::after {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full bg-red-700 transition-all duration-1000;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.nav-items:hover::after {
+  transform: scale(1);
+}
+
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+
+/* --- type-writer ---  */
+/* Light Mode Glow */
+/* .animate-glow {
+  animation: glow-light 2s ease-in-out infinite;
+}
+
+html.dark  */
+.animate-glow {
+  animation: glow-dark 2s ease-in-out infinite;
+}
+
+@keyframes glow-light {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes glow-dark {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Cursor blink animation stays the same */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 0.75s ease-in-out infinite;
+}
+
+
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+
+.custom-underline {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+  text-decoration-skip-ink: none;
+  text-decoration-color: rgba(255, 255, 255, 0.459);
+}
+
+.custom-underline-2 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  text-decoration-color: rgba(255, 255, 255, 0.459);
 }
