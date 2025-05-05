@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { ParticlesConfig } from "./types";
 import ParticleCanvas from "./ParticleCanvas";
 
@@ -7,7 +7,7 @@ import ParticleCanvas from "./ParticleCanvas";
  * ParticleBackground component that displays a background image with animated particles
  */
 function ParticleBackground() {
-  const [particlesConfig, setParticlesConfig] = useState<ParticlesConfig>(() => ({
+  const [particlesConfig] = useState<ParticlesConfig>(() => ({
     autoPlay: true,
     background: {
       color: "#000000",

@@ -2,10 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaTwitter,
   FaRss,
   FaGooglePlusG,
-  FaCircle,
+  FaCircle
 } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 

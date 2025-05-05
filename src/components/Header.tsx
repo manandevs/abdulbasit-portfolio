@@ -1,6 +1,5 @@
 import React from "react";
 import { Typewriter } from "./Typewriter";
-import Image from "next/image";
 import CircularSkillsImage from "./CircularSkillsImage";
 
 export default function Header() {
@@ -17,7 +16,7 @@ export default function Header() {
         {/* content  */}
         <p className="font-PlayfairDisplayBold mb-8 sm:mb-10 text-lg sm:text-xl leading-snug max-w-[600px] text-[#ffffffd2] z-50">
           Linear helps streamline software projects, sprints, tasks, and bug
-          tracking. It's built for high-performance teams to create, build and
+          tracking. It&apos;s built for high-performance teams to create, build and
           ship with confidence.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
