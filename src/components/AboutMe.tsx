@@ -13,7 +13,7 @@ export default function AboutMe() {
       <ul className="list-disc px-5">
         <li>
           <p className="font-PlayfairDisplayBold text-[17px] md:text-xl font-bold tracking-[0.07rem] pt-3.5">
-            Hi, I'm <span className="custom-underline-2">Abdul Basit</span> — a
+            Hi, I&rsquo;m <span className="custom-underline-2">Abdul Basit</span> — a
             dedicated Front-End Developer with over 2 years of experience
             building responsive, accessible, and high-performing web interfaces.
             I specialize in React, Tailwind CSS, and JavaScript.
@@ -21,15 +21,15 @@ export default function AboutMe() {
         </li>
         <li>
           <p className="font-PlayfairDisplayBold text-[17px] md:text-xl font-bold tracking-[0.07rem] pt-3.5">
-            Over the past 2+ years, I’ve worked on various projects — both
+            Over the past 2+ years, I&rsquo;ve worked on various projects — both
             independently and as part of teams — where I enhanced my expertise
-            in UI/UX design, component architecture, and state management. I'm
+            in UI/UX design, component architecture, and state management. I&rsquo;m
             passionate about crafting clean, scalable code.
           </p>
         </li>
         <li>
           <p className="font-PlayfairDisplayBold text-[17px] md:text-xl font-bold tracking-[0.07rem] pt-3.5">
-            I'm proficient with Git, collaborative development workflows, and
+            I&rsquo;m proficient with Git, collaborative development workflows, and
             agile methodologies. I love working in team settings to build
             reliable and visually engaging user experiences.
           </p>
